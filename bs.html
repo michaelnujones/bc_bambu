@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Bambu Tertiup Angin</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #e0f7fa;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .bamboo {
+            position: absolute;
+            bottom: 0;
+            width: 15px;
+            height: 250px;
+            background-color: #6b8e23;
+            transform-origin: bottom;
+            animation: sway 4s infinite ease-in-out;
+        }
+
+        .bamboo::before, .bamboo::after {
+            content: '';
+            position: absolute;
+            bottom: 250px;
+            left: -10px;
+            width: 35px;
+            height: 70px;
+            background-color: #228b22;
+            border-radius: 50%;
+            transform-origin: left;
+            transform: rotate(20deg);
+        }
+
+        .bamboo::after {
+            left: -15px;
+            bottom: 210px;
+            width: 45px;
+            height: 90px;
+            transform: rotate(30deg);
+        }
+
+        @keyframes sway {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(-10deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .bamboo:nth-child(odd) {
+            animation-delay: 1s;
+        }
+
+        .bamboo:nth-child(even) {
+            animation-delay: 2s;
+        }
+
+        .bamboo:nth-child(1) { left: 5%; }
+        .bamboo:nth-child(2) { left: 15%; }
+        .bamboo:nth-child(3) { left: 25%; }
+        .bamboo:nth-child(4) { left: 35%; }
+        .bamboo:nth-child(5) { left: 45%; }
+        .bamboo:nth-child(6) { left: 55%; }
+        .bamboo:nth-child(7) { left: 65%; }
+        .bamboo:nth-child(8) { left: 75%; }
+        .bamboo:nth-child(9) { left: 85%; }
+    </style>
+</head>
+<body>
+    <div class="bamboo"></div>
+    <div class="bamboo"></div>
+    <div class="bamboo"></div>
+    <div class="bamboo"></div>
+    <div class="bamboo"></div>
+    <div class="bamboo"></div>
+    <div class="bamboo"></div>
+    <div class="bamboo"></div>
+    <div class="bamboo"></div>
+</body>
+</html>
